@@ -1,0 +1,51 @@
+.menu_icon {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+.menu_icon span {
+    display: block;
+    height: 6px;
+    width: 48px;
+    margin: 0.5rem 0rem;
+
+    background-color: var(--foreground);
+}
+
+nav {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.menu_container {
+    position: relative;
+}
+
+.menu_items {
+    width: 200px;
+    height: 300px;
+    margin-left: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    border-style: solid;
+    border-color: var(--foreground);
+    border-width: 2px;
+
+    list-style: none;
+
+    position: absolute;
+    top: 3.5rem;
+    transform: translateX(-125%);
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu_container:hover .menu_items {
+    transform: translateX(0%);
+}
