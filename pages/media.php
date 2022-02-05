@@ -1,6 +1,5 @@
 <?php
 // imports:
-require_once "../components/menu.php";
 require_once "../module/config.php";
 require_once "../module/math.php";
 
