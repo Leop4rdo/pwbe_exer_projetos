@@ -3,7 +3,7 @@
 :root {
     --background: #ddd;
     --foreground: #333;
-    --purple: #cb40e7;
+    --red: #dd3c3c;
 }
 
 * {
@@ -11,4 +11,19 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    color: var(--foreground);
+}
+
+body {
+    background-color: var(--background);
+}
+
+.msg_erro {
+    font-size: 1rem;
+    color: var(--red);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 2rem;
 }

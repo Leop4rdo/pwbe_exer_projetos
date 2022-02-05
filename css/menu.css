@@ -23,7 +23,7 @@ nav {
 }
 
 .menu_items {
-    width: 200px;
+    width: 250px;
     height: 300px;
     margin-left: 1.5rem;
 
@@ -40,7 +40,7 @@ nav {
     list-style: none;
 
     position: absolute;
-    top: 3.5rem;
+    top: 3rem;
     transform: translateX(-125%);
 
     transition: transform 0.5s ease-in-out;
@@ -48,4 +48,13 @@ nav {
 
 .menu_container:hover .menu_items {
     transform: translateX(0%);
+}
+
+.menu_items a {
+    font-size: 1.25rem;
+    transition: font-size 0.5s ease-in-out;
+}
+
+.menu_items a:hover {
+    font-size: 1.75rem;
 }

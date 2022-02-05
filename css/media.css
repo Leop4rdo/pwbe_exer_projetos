@@ -1,0 +1,65 @@
+#conteudo {
+    width: 400px;
+    height: 300px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border: solid 1px var(--foreground);
+    text-align: center;
+}
+
+#titulo {
+    width: inherit;
+    height: 80px;
+    background-color: var(--foreground);
+    color: var(--background);
+    box-sizing: border-box;
+    padding-top: 25px;
+    font-size: 26px;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+#form {
+    width: inherit;
+    height: 185px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+input {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#resultado {
+    width: inherit;
+    height: 35px;
+    background-color: var(--foreground);
+    color: var(--background);
+    box-sizing: border-box;
+    padding-top: 2px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#botaoReset {
+    width: 120px;
+    height: 35px;
+    background-color: var(--red);
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+    margin-top: -30px;
+    margin-left: 20px;
+}
+
+#botaoReset a {
+    color: #ffffff;
+    text-decoration: none;
+}
