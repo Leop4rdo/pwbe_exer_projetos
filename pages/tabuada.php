@@ -1,3 +1,36 @@
+<?php
+require_once "../module/config.php";
+require_once "../module/calculos.php";
+
+$tabuada = (float) 0;
+$maxMultiplicador = (float) 0;
+$txtResultado = (string) null;
+
+if (isset($_POST['btnCalc'])) {
+    $tabuada = $_POST['txtTabuada'];
+    $maxMultiplicador = $_POST['txtMaxMultiplicador'];
+    $txtResultado = "";
+
+    if ($tabuada == "" || $maxMultiplicador == "") {
+        echo ERROR_MSG_BLANK_INPUT;
+    } elseif (!is_numeric($tabuada) || !is_numeric($maxMultiplicador)) {
+        echo ERROR_MSG_NOT_NUMERIC;
+    } elseif ($tabuada == 0) {
+        echo ERROR_MSG_TABUADA_ZERO;
+    } elseif ($maxMultiplicador <= 0) {
+        echo ERROR_MSG_MULTIPLICADOR;
+    } else {
+        for ($i = 0; $i <= $maxMultiplicador; $i++) {
+            $produto = calc($tabuada, $i, "MULTIPLICAR");
+            $txtResultado .= "$tabuada x $i = $produto <br/>";
+        }
+    }
+}
+
+
+
+?>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,21 +63,21 @@
 
     <div id="conteudo">
         <div id="titulo">Tabuada</div>
-        <form action="" method="$_POST" name="frmTabuada" id="form">
+        <form action="" method="POST" name="frmTabuada" id="form">
             <div>
                 <label>Tabuada : </label>
-                <input type="text" name="txtTabuada" value="1">
+                <input type="text" name="txtTabuada" value=<?= $tabuada ?>>
             </div>
             <div>
                 <label>Maximo Multiplicador : </label>
-                <input type="text" name="txtMaxMultiplicador" value="10">
+                <input type="text" name="txtMaxMultiplicador" value=<?= $maxMultiplicador ?>>
             </div>
 
-            <input type="submit" value="Calcular" class="button_calcular">
+            <input type="submit" value="Calcular" name="btnCalc" class="button_calcular">
         </form>
 
         <div class="tabuada">
-
+            <?= $txtResultado ?>
         </div>
     </div>
 </body>
