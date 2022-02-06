@@ -1,7 +1,7 @@
 <?php
 // imports:
 require_once "../module/config.php";
-require_once "../module/math.php";
+require_once "../module/calculos.php";
 
 // Declaração de variaveis PHP:
 // $nome = (tipo) valor;
@@ -16,15 +16,13 @@ if (isset($_POST["btnCalc"])) { // verifica se o btnCalc foi pressionado
     $numeros[2] = $_POST["txtNota3"];
     $numeros[3] = $_POST["txtNota4"];
 
-    if ($_POST["txtNota1"] == "" || $_POST["txtNota2"] == "" || $_POST["txtNota3"] == "" || $_POST["txtNota4"] == "") { // tratamento de caixa vazia
-        echo ERROR_MSG_BLANK_INPUT;
-    } else if (!is_numeric($numeros[0]) || !is_numeric($numeros[1]) || !is_numeric($numeros[2]) || !is_numeric($numeros[3])) { // tratamento de caractere invalido
-        // os metodos "is_type($var)" verificam se a variavel é do tipo type.
 
+    if ($_POST["txtNota1"] == "" || $_POST["txtNota2"] == "" || $_POST["txtNota3"] == "" || $_POST["txtNota4"] == "") // tratamento de caixa vazia
+        echo ERROR_MSG_BLANK_INPUT;
+    else if (!is_numeric($numeros[0]) || !is_numeric($numeros[1]) || !is_numeric($numeros[2]) || !is_numeric($numeros[3])) // tratamento de caractere invalido
         echo ERROR_MSG_NOT_NUMERIC;
-    } else {
-        $resultado = avarage($numeros); // calculando media
-    }
+    else
+        $resultado = media($numeros); // calculando media
 }
 ?>
 
@@ -38,7 +36,7 @@ if (isset($_POST["btnCalc"])) { // verifica se o btnCalc foi pressionado
     <!-- LOADING CSS -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" type="text/css" href="../css//media.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
 </head>
 
 <body>
@@ -51,10 +49,10 @@ if (isset($_POST["btnCalc"])) { // verifica se o btnCalc foi pressionado
             </div>
 
             <ul class='menu_items'>
-                <li><a href='../index.php'>Home</a></li>
+                <li><a href='../index.html'>Home</a></li>
                 <li><a href='./media.php'>Média</a></li>
-                <li><a href=''>Calculadora</a></li>
-                <li><a href=''>Tabuada</a></li>
+                <li><a href='./calculadora.php'>Calculadora</a></li>
+                <li><a href='./tabuada.php'>Tabuada</a></li>
                 <li><a href=''>Pares e Impares</a></li>
             </ul>
         </div>
@@ -87,7 +85,7 @@ if (isset($_POST["btnCalc"])) { // verifica se o btnCalc foi pressionado
                     <input type="text" name="txtNota4" value="<?= $numeros[3] ?>">
                 </div>
                 <div>
-                    <input type="submit" name="btnCalc" value="Calcular">
+                    <input type="submit" name="btnCalc" value="Calcular" class="button_calcular">
                     <div id="botaoReset">
                         <a href="media.php">
                             Novo Cálculo
