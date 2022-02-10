@@ -2,8 +2,8 @@
 require_once "../module/config.php";
 require_once "../module/calculos.php";
 
-$tabuada = (float) 0;
-$maxMultiplicador = (float) 0;
+$tabuada = (double) 0;
+$maxMultiplicador = (double) 0;
 $txtResultado = (string) null;
 
 if (isset($_POST['btnCalc'])) {
