@@ -1,8 +1,8 @@
 .menu_icon {
     margin-top: 2rem;
     margin-left: 1.5rem;
-    padding-bottom: 2rem;
-    padding-right: 2rem;
+    padding-bottom: 0rem;
+    padding-right: 0rem;
 }
 
 .menu_icon span {
@@ -28,6 +28,11 @@
 
 .menu_container:hover .menu_icon span:nth-child(3) {
     transform: translate(0px, -14px) rotate(-45deg);
+}
+
+.menu_container:hover .menu_icon {
+    padding-bottom: 2rem;
+    padding-right: 2.5rem;
 }
 
 nav {
