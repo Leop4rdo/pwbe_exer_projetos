@@ -110,12 +110,14 @@ function gerarOptions(int $inicio, int $fim, $selectedValue){
 
         <div class="result_container">
             <div>
+                <span>Impares:</span>
                 <div class="result_list" id="par">
                     <?= implode("<br/>", $arrPares) ?>
                 </div>
                 <span>Qtde de Pares: <?= sizeof($arrPares) ?></span>
             </div>
             <div>
+                <span>Impares:</span>
                 <div class="result_list" id="impar">
                     <?= implode("<br/>", $arrImpares) ?>
                 </div>
