@@ -1,6 +1,8 @@
 .menu_icon {
     margin-top: 2rem;
     margin-left: 1.5rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
 }
 
 .menu_icon span {
@@ -12,6 +14,20 @@
     border-radius: 3px;
 
     background-color: var(--foreground);
+
+    transition: transform 0.25s ease-in-out;
+}
+
+.menu_container:hover .menu_icon span:nth-child(1) {
+    transform: translate(0px, 14px) rotate(45deg);
+}
+
+.menu_container:hover .menu_icon span:nth-child(2) {
+    transform: scale(0);
+}
+
+.menu_container:hover .menu_icon span:nth-child(3) {
+    transform: translate(0px, -14px) rotate(-45deg);
 }
 
 nav {
@@ -42,7 +58,7 @@ nav {
     list-style: none;
 
     position: absolute;
-    top: 3rem;
+    top: 3.25rem;
     transform: translateX(-125%);
 
     transition: transform 0.5s ease-in-out;
