@@ -64,11 +64,11 @@ if (isset($_POST['btnCalc'])) {
     <div id="conteudo">
         <div id="titulo">Tabuada</div>
         <form action="" method="POST" name="frmTabuada" id="form">
-            <div>
+            <div class="input_container">
                 <label>Tabuada : </label>
                 <input type="text" name="txtTabuada" value=<?= $tabuada ?>>
             </div>
-            <div>
+            <div class="input_container">
                 <label>Maximo Multiplicador : </label>
                 <input type="text" name="txtMaxMultiplicador" value=<?= $maxMultiplicador ?>>
             </div>

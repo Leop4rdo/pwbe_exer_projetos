@@ -2,6 +2,9 @@
 
 /**
  * retorna a media dos numberos passados como parametro
+ * 
+ * @param array $numeros - array de numeros utilizados para o calculo da media
+ * @return media
  */
 function media(array $numeros)
 {
@@ -10,6 +13,11 @@ function media(array $numeros)
 
 /**
  * Retorna o resultado de uma operação numerica entre os numeros passados como parametros
+ * 
+ * @param   double $num1    primeiro numero usado na expressão
+ * @param   double $num2    segundo numero usado na expressão
+ * @param   double $operacao    operação matematica a ser realizada
+ * @return  double resultado
  */
 function calc($num1, $num2, String $operacao)
 {

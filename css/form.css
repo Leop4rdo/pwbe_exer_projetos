@@ -89,3 +89,10 @@ input[type="text"] {
 
     overflow-y: scroll;
 }
+
+.input_container {
+    width: 375px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
