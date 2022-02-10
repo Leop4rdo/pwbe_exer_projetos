@@ -30,7 +30,7 @@ if (isset($_POST["btnCalc"])) { // verifica se o btnCalc foi pressionado
 <html lang="pt-BR">
 
 <head>
-    <title>Média</title>
+    <title>Exercico - Média</title>
     <meta charset="utf-8">
 
     <!-- LOADING CSS -->
@@ -53,7 +53,7 @@ if (isset($_POST["btnCalc"])) { // verifica se o btnCalc foi pressionado
                 <li><a href='./media.php'>Média</a></li>
                 <li><a href='./calculadora.php'>Calculadora</a></li>
                 <li><a href='./tabuada.php'>Tabuada</a></li>
-                <li><a href=''>Pares e Impares</a></li>
+                <li><a href='./par_impar.php'>Pares e Impares</a></li>
             </ul>
         </div>
     </nav>

@@ -37,7 +37,7 @@ if (isset($_POST["btnCalc"])) {
 <html>
 
 <head>
-	<title>Calculadora - Simples</title>
+	<title>Exercicio - Calculadora Simples</title>
 
 	<!-- LOADING CSS -->
 	<link rel="stylesheet" href="../css/global.css">
@@ -59,7 +59,7 @@ if (isset($_POST["btnCalc"])) {
 				<li><a href='./media.php'>Média</a></li>
 				<li><a href='./calculadora.php'>Calculadora</a></li>
 				<li><a href='./tabuada.php'>Tabuada</a></li>
-				<li><a href=''>Pares e Impares</a></li>
+				<li><a href='./par_impar.php'>Pares e Impares</a></li>
 			</ul>
 		</div>
 	</nav>

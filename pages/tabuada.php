@@ -34,7 +34,7 @@ if (isset($_POST['btnCalc'])) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercicio - projetos pwbe</title>
+    <title>Exercicio - tabuada</title>
 
     <!-- Loading CSS -->
     <link rel="stylesheet" href="../css/global.css" />
@@ -56,7 +56,7 @@ if (isset($_POST['btnCalc'])) {
                 <li><a href='./media.php'>Média</a></li>
                 <li><a href='./calculadora.php'>Calculadora</a></li>
                 <li><a href='./tabuada.php'>Tabuada</a></li>
-                <li><a href=''>Pares e Impares</a></li>
+                <li><a href='./par_impar.php'>Pares e Impares</a></li>
             </ul>
         </div>
     </nav>
@@ -76,7 +76,7 @@ if (isset($_POST['btnCalc'])) {
             <input type="submit" value="Calcular" name="btnCalc" class="button_calcular">
         </form>
 
-        <div class="tabuada">
+        <div class="result_list">
             <?= $txtResultado ?>
         </div>
     </div>
