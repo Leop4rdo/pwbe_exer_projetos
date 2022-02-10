@@ -20,9 +20,15 @@ if (isset($_POST["btnCalc"])) {
         echo ERROR_MSG_BLANK_INPUT;
     } elseif ($inicio > $fim) { // validação contagem invalida
         echo ERROR_MSG_INICIO_MAIOR;
+    } elseif ($inicio == $fim){
+        echo ERROR_MSG_INICIO_IGUAL_FIM;
     } else {
-        $arrPares = ($inicio%2 == 0) ? range($inicio, $fim, 2) : range($inicio + 1, $fim, 2); // gerando array com apenas numeros pares
-        $arrImpares =  array_diff(range($inicio, $fim), $arrPares); // gerando array com apenas numeros impares
+        for ($i=$inicio; $i <= $fim ; $i++) { 
+            if ($i%2 == 0) 
+                $arrPares[] = $i; // adicionando $i no final do array $arrPares
+            else 
+                $arrImpares[] = $i; // adicionando $i no final do array $arrImpares
+        }
     }
 }
 
