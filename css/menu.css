@@ -19,7 +19,7 @@
 }
 
 .menu_container:hover .menu_icon span:nth-child(1) {
-    transform: translate(0px, 14px) rotate(45deg);
+    transform: translate(0px, 14px) rotate(135deg);
 }
 
 .menu_container:hover .menu_icon span:nth-child(2) {
@@ -27,7 +27,7 @@
 }
 
 .menu_container:hover .menu_icon span:nth-child(3) {
-    transform: translate(0px, -14px) rotate(-45deg);
+    transform: translate(0px, -14px) rotate(-135deg);
 }
 
 .menu_container:hover .menu_icon {
