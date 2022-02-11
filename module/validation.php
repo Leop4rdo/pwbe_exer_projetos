@@ -14,8 +14,8 @@ function isRadioChecked(string $currentValue, string $value){
 /**
  * verifica se o radio deve permanecer checked
  * 
- * @param	mixed $currentValue	name do radio selecionado anteriormente pelo usuario
- * @param	mixed $value			name do radio que esta realizando a verificação 
+ * @param	string $currentValue	name do radio selecionado anteriormente pelo usuario
+ * @param	string $value			name do radio que esta realizando a verificação 
  * @return  string
  */
 function isOptionSelected($currentValue, $value){

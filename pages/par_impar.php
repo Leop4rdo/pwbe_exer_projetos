@@ -36,10 +36,10 @@ if (isset($_POST["btnCalc"])) {
  * Gera as options de um select com apenas valores numericos entre os valores
  * passados como parametros.
  * 
- * @param int $inicio   primeiro valor
- * @param int $fim      ultimo valor
+ * @param int $inicio           primeiro valor
+ * @param int $fim              ultimo valor
  * @param int $selectedValue    valor selecionado
- * @return string       html das options
+ * @return string               html das options
  */
 function gerarOptions(int $inicio, int $fim, $selectedValue){
     $options = (string) null;
