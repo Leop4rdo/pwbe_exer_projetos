@@ -23,7 +23,7 @@ if (isset($_POST["btnCalc"])) {
     } elseif ($inicio == $fim){
         echo ERROR_MSG_INICIO_IGUAL_FIM;
     } else {
-        for ($i=$inicio; $i <= $fim ; $i++) { 
+        for ($i=$inicio; $i <= $fim; $i++) { 
             if ($i%2 == 0) 
                 $arrPares[] = $i; // adicionando $i no final do array $arrPares
             else 
@@ -110,15 +110,15 @@ function gerarOptions(int $inicio, int $fim, $selectedValue){
 
         <div class="result_container">
             <div>
-                <span>Impares:</span>
-                <div class="result_list" id="par">
+                <span>Pares:</span>
+                <div class="result_list" id="impar">
                     <?= implode("<br/>", $arrPares) ?>
                 </div>
                 <span>Qtde de Pares: <?= sizeof($arrPares) ?></span>
             </div>
             <div>
                 <span>Impares:</span>
-                <div class="result_list" id="impar">
+                <div class="result_list" id="par">
                     <?= implode("<br/>", $arrImpares) ?>
                 </div>
                 <span>Qtde de Impares: <?= sizeof($arrImpares) ?></span>
