@@ -23,12 +23,8 @@ if (isset($_POST["btnCalc"])) {
     } elseif ($inicio == $fim){
         echo ERROR_MSG_INICIO_IGUAL_FIM;
     } else {
-        for ($i=$inicio; $i <= $fim; $i++) { 
-            if ($i%2 == 0) 
-                $arrPares[] = $i; // adicionando $i no final do array $arrPares
-            else 
-                $arrImpares[] = $i; // adicionando $i no final do array $arrImpares
-        }
+        $arrPares = getArray($inicio, $fim, true);
+        $arrImpares = getArray($inicio, $fim, false);
     }
 }
 
@@ -54,6 +50,18 @@ function gerarOptions(int $inicio, int $fim, $selectedValue){
     return $options;
 }
 
+function getArray(int $inicio, int $fim, bool $par){
+    $arr = array();
+
+    for ($i=$inicio; $i <= $fim; $i++) { 
+        if ($i%2 == 0 && $par) 
+            $arr[] = $i; // adicionando $i no final do array quando $i for par
+        else 
+            $arr[] = $i; // adicionando $i no final do array quando $i for impar
+    }
+
+    return $arr;
+}
 ?>
 
 <!DOCTYPE html>
