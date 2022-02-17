@@ -20,14 +20,28 @@ if (isset($_POST['btnCalc'])) {
     } elseif ($maxMultiplicador <= 0) {
         echo ERROR_MSG_MULTIPLICADOR;
     } else {
-        for ($i = 0; $i <= $maxMultiplicador; $i++) {
-            $produto = calc($tabuada, $i, "MULTIPLICAR");
-            $txtResultado .= "$tabuada x $i = $produto <br/>";
-        }
+        $txtResultado = getTabuada($tabuada, $maxMultiplicador);
     }
 }
 
+/**
+ * Devolve uma tabuada de acordo com os parametros
+ * 
+ * @param int $tabua                numero da tabuada
+ * @param int $maxMultiplicador     multiplicador maximo da tabuada
+ * 
+ * @return string
+ */
+function getTabuada(int $tabuada, int $maxMultiplicador) {
+    $resultado = "";
 
+    for ($i = 0; $i <= $maxMultiplicador; $i++) {
+        $produto = calc($tabuada, $i, "MULTIPLICAR");
+        $resultado .= "$tabuada x $i = $produto <br/>";
+    }
+
+    return $resultado;
+}
 
 ?>
 

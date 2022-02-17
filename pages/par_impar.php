@@ -50,6 +50,13 @@ function gerarOptions(int $inicio, int $fim, $selectedValue){
     return $options;
 }
 
+/**
+ * Devolve um array com apenas numeros ou pares ou impares
+ * 
+ * @param int $inicio   inicio da contagem.
+ * @param int $fim      fim da contagem.
+ * @param bool $par     define qual tipo de array deve ser devolvido, par ou impar.
+ */
 function getArray(int $inicio, int $fim, bool $par){
     $arr = array();
 
